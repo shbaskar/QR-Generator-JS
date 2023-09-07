@@ -6,93 +6,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Qr Code Generator </title>
-    <style>
-        body {
-            background-color: #2c3338;
-        }
-
-        #form {
-            width: 400px;
-            padding: 24px;
-            margin-left: auto;
-            margin-right: auto;
-
-        }
-
-        #h2 {
-            color: white;
-            text-align: center;
-            font-size: 30px;
-        }
-
-        .input {
-            width: 100%;
-            background-color: darkgray;
-
-        }
-
-        #size {
-            padding: 20px;
-            border-radius: 4px;
-        }
-
-        #text {
-            border-radius: 4px;
-            padding-top: 10px;
-            padding-bottom: 10px;
-        }
-
-        #submit {
-            background-color: coral;
-            color: white;
-            padding: 20px;
-            font-size: 20px;
-            width: 100%;
-            border: none;
-            border-radius: 4px;
-        }
-
-        #p {
-            color: white;
-            text-align: center;
-            font-size: 15px;
-        }
-    </style>
-    <script type="text/javascript">
-        function genQr() {
-            var gapi = "https://chart.googleapis.com/chart?chf=bg,s,65432100&cht=qr&chs=";
-            var myimg = document.getElementById("img");
-            var text = document.getElementById("text").value;
-            var size = document.getElementById("size").value;
-
-            if (text !== "" && size == "100") {
-                myimg.src = gapi + "100x100" + "&chl=" + text;
-            }
-            else if (text !== "" && size == "150") {
-                myimg.src = gapi + "150x150" + "&chl=" + text;
-            }
-            else if (text !== "" && size == "200") {
-                myimg.src = gapi + "200x200" + "&chl=" + text;
-            }
-            else if (text !== "" && size == "250") {
-                myimg.src = gapi + "250x250" + "&chl=" + text;
-            }
-            else if (text !== "" && size == "300") {
-                myimg.src = gapi + "300x300" + "&chl=" + text;
-            }
-            else if (text !== "" && size == "400") {
-                myimg.src = gapi + "400x400" + "&chl=" + text;
-            }
-            else {
-                alert("Please enter the text");
-            }
-        }
-    </script>
 
 </head>
 
 <body>
-    
+
     <div id="form">
         <h2 id="h2">Qr Code Generator </h2>
         <center><img src="" id="img"></center>
